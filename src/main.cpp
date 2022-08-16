@@ -100,7 +100,7 @@ void Watch_Needle(pos center, int r, struct tm time_data) {
         int(center.y - r * 4 / 5.0 * cos(-min / 60.0 * PI * 2)),
         int(center.x - r / 20.0 * sin(-min / 60.0 * PI * 2 + PI / 2.0)),
         int(center.y - r / 20.0 * cos(-min / 60.0 * PI * 2 + PI / 2.0)),
-        int(center.x - r / 20.0 * sin(-min / 60 * PI * 2 - PI / 2.0)),
+        int(center.x - r / 20.0 * sin(-min / 60.0 * PI * 2 - PI / 2.0)),
         int(center.y - r / 20.0 * cos(-min / 60.0 * PI * 2 - PI / 2.0)), BLACK);
     sprite.fillCircle(center.x, center.y, int(r / 14), BLACK);
 }
