@@ -10,4 +10,6 @@
 String getWeatherIconPath(int num);
 
 int getWeatherCode();
+int getRainyPercent();
+
 #endif

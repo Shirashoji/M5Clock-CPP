@@ -48,3 +48,18 @@ int getWeatherCode() {
     deserializeJson(djd, payload);
     return int(djd[0]["timeSeries"][0]["areas"][0]["weatherCodes"][0]);
 }
+
+int getRainyPercent() {
+    HTTPClient http;
+    String payload;
+    http.begin(
+        "https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json");
+    int httpCode = http.GET();
+    if (httpCode == HTTP_CODE_OK) {
+        payload = http.getString();
+    }
+    DynamicJsonDocument djd(4096);
+    deserializeJson(djd, payload);
+    return int(djd[0]["timeSeries"][0]["areas"][0]["pops"][0]);
+}
+
